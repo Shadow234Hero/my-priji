@@ -36,7 +36,7 @@ const HeroSection = () => {
         </motion.div>
 
         <h1 className="font-display text-6xl sm:text-8xl md:text-9xl text-primary mb-4">
-          For You
+          For Priji(Gundi)
         </h1>
         <p className="font-heading text-xl sm:text-2xl text-foreground/70 italic max-w-lg mx-auto">
           To Make My Cutie Putie Patootie Blush👽🫣🤭
