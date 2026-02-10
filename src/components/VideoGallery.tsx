@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Heart, Film } from "lucide-react";
 
 const videos = [
-  { src: "/audio/voicenote1.mp4", title: "For Her ♥" },
-  { src: "/audio/voicenote2.mp4", title: "My Feelings" },
-  { src: "/audio/voicenote3.mp4", title: "From My Heart" },
-  { src: "/audio/voicenote4.mp4", title: "My Girl" },
+  { src: "/audio/voicenote1.mp4", title: "I Found Her😭🤭" },
+  { src: "/audio/voicenote2.mp4", title: "My Girll..." },
+  { src: "/audio/voicenote3.mp4", title: "Nazar Na Lag Jaye Jaanu🧿..." },
+  { src: "/audio/voicenote4.mp4", title: "Forever🤭" },
 ];
 
 const VideoGallery = () => {
@@ -20,10 +20,10 @@ const VideoGallery = () => {
       >
         <Film className="w-10 h-10 text-primary mx-auto mb-4" />
         <h2 className="font-display text-5xl sm:text-7xl text-primary mb-3">
-          Our Moments
+          You Are Mine🤭
         </h2>
         <p className="font-heading italic text-muted-foreground text-lg">
-          Little videos that hold our biggest memories
+          Some edits that hold high feelings for me...
         </p>
       </motion.div>
 
