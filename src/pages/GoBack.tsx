@@ -22,13 +22,13 @@ const GoBack = () => {
         </motion.div>
 
         <h1 className="font-display text-5xl sm:text-7xl text-primary mb-6">
-          Oops!
+          Areyy oo jyada chrbi chd rhi??
         </h1>
         <p className="font-heading text-2xl text-foreground/70 mb-12 italic">
-          That wasn't the right answer, my love... 💔
+          Aisa Lafa Marunga Na Dimaag Mein Hulululu Hojayega
         </p>
         <p className="font-heading text-3xl text-primary mb-12">
-          Go back and click <span className="font-display text-4xl">Yes</span> 💕
+          Wapis jao aur click kro <span className="font-display text-4xl">Yes💖</span> pe
         </p>
 
         <motion.button
