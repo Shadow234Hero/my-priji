@@ -39,7 +39,7 @@ const HeroSection = () => {
           For You
         </h1>
         <p className="font-heading text-xl sm:text-2xl text-foreground/70 italic max-w-lg mx-auto">
-          Every moment with you is a beautiful memory I cherish forever
+          To Make My Cutie Putie Patootie Blush👽🫣🤭
         </p>
       </motion.div>
 
