@@ -13,7 +13,7 @@ const LoveLetter = () => {
       >
         <div className="text-center mb-12">
           <h2 className="font-display text-5xl sm:text-7xl text-primary mb-3">
-            My Letter to You
+            A Letter For You
           </h2>
         </div>
 
@@ -27,30 +27,28 @@ const LoveLetter = () => {
           <Heart className="absolute top-6 right-6 w-5 h-5 text-primary/30 fill-primary/30" />
           
           <p className="font-body text-foreground/80 leading-relaxed text-lg space-y-4">
-            <span className="font-display text-4xl text-primary block mb-4">My Dearest,</span>
+            <span className="font-display text-4xl text-primary block mb-4">My Dearest Priji,</span>
           </p>
           
           <div className="font-body text-foreground/80 leading-relaxed text-base sm:text-lg space-y-4 mt-4">
             <p>
-              From the moment you came into my life, everything changed. The colors became brighter, 
-              the music sounded sweeter, and every ordinary moment turned into something magical — 
-              all because of you.
+              Toh umm... khase se shuru kru?? kaise btau about my feelings kaise share kru?? Is this
+              even possible?? I don't think so I don't even know ki kya bolu but it's just that I LOVE YOU
+              And you know that kya ye bkna zaroori tha😭🤭 At this point i realised what really Love is
+              and How much you matters to me.
             </p>
             <p>
-              You are the first thought in my morning and the last smile before I sleep. Your laughter 
-              is my favorite melody, and your presence is the warmth that makes my world feel complete.
+              I know destiny is taking our tests... but still see how strong you are😭😭 main toh pant mein
+              hag deta fir bolta mamma saaf crow😭🤣 Toh Yes let's show what real Love is to God let's show
+              World what real love is... it's just that I need you so... umm... Ahem Ahem...Will you chose to
+              rest of life with me🫴(na bolegi bhi toh konsa sununga🤭😈)
             </p>
             <p>
-              I don't need grand gestures to know what we have is real. It's in the little things — 
-              the way you look at me, the way you hold my hand, the way you make even silence feel 
-              like a conversation.
-            </p>
-            <p>
-              Thank you for being you. Thank you for choosing me. Thank you for making every day 
-              feel like Valentine's Day.
+              Thank You really really damn much for everything. I know ki Koi Thankyou itna bada abhar nhi
+              chuka skta but shi h na aise peecha nhi chhutega🤭🤭.
             </p>
             <p className="font-heading italic text-primary pt-4">
-              Forever & Always Yours ♥
+              Yours Papa Ka Para🤭💖
             </p>
           </div>
         </motion.div>
