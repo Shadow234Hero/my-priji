@@ -19,10 +19,10 @@ const PhotoGallery = () => {
         className="text-center mb-16"
       >
         <h2 className="font-display text-5xl sm:text-7xl text-primary mb-3">
-          My Beautiful Girl
+          My Swarg Ki Pri🫣🤭
         </h2>
         <p className="font-heading italic text-muted-foreground text-lg">
-          Every picture tells our story
+          Kitni Sundrrr Ho AAP😭😭
         </p>
       </motion.div>
 
