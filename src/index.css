@@ -125,3 +125,16 @@
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+@keyframes flashy-border {
+  0% { border-color: hsl(340 82% 65%); box-shadow: 0 0 15px hsl(340 82% 65% / 0.5); }
+  25% { border-color: hsl(350 80% 72%); box-shadow: 0 0 25px hsl(350 80% 72% / 0.6); }
+  50% { border-color: hsl(40 70% 55%); box-shadow: 0 0 30px hsl(40 70% 55% / 0.5); }
+  75% { border-color: hsl(340 70% 85%); box-shadow: 0 0 25px hsl(340 70% 85% / 0.6); }
+  100% { border-color: hsl(340 82% 65%); box-shadow: 0 0 15px hsl(340 82% 65% / 0.5); }
+}
+
+.animate-flashy-border {
+  border: 3px solid hsl(340 82% 65%);
+  animation: flashy-border 2s ease-in-out infinite;
+}

@@ -26,7 +26,7 @@ const MusicPlayer = () => {
 
   return (
     <>
-      <audio ref={audioRef} src="/audio/bgmusic.mp4" loop autoPlay muted />
+      <audio ref={audioRef} src="/audio/bgmusic.mp3" loop autoPlay muted />
       <button
         onClick={(e) => {
           e.stopPropagation();

@@ -10,6 +10,23 @@ const HeroSection = () => {
         transition={{ duration: 1.2, ease: "easeOut" }}
         className="text-center"
       >
+        {/* Circular profile photo with flashy border */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="mb-8 flex justify-center"
+        >
+          <div className="relative w-44 h-44 sm:w-56 sm:h-56 rounded-full p-1 animate-flashy-border">
+            <img
+              src="/photos/profile.jpg"
+              alt="My Love"
+              className="w-full h-full rounded-full object-cover border-4 border-background"
+            />
+            <div className="absolute inset-0 rounded-full animate-pulse-glow pointer-events-none" />
+          </div>
+        </motion.div>
+
         <motion.div
           animate={{ scale: [1, 1.15, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
