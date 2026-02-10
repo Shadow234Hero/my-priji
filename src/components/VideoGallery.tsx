@@ -39,7 +39,7 @@ const VideoGallery = () => {
           >
             <video
               controls
-              className="w-full aspect-video object-cover"
+              className="w-full"
               preload="metadata"
             >
               <source src={video.src} type="video/mp4" />
