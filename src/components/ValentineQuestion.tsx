@@ -38,7 +38,7 @@ const ValentineQuestion = () => {
           Will You Be My Valentine??
         </h2>
         <p className="font-heading italic text-muted-foreground text-xl mb-12">
-          This is the most important question of my life...
+          You are already but still...
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -48,7 +48,7 @@ const ValentineQuestion = () => {
             onClick={handleYes}
             className="px-12 py-5 bg-primary text-primary-foreground rounded-full font-heading text-2xl shadow-romantic animate-pulse-glow transition-all hover:brightness-110"
           >
-            Yes! 💕
+            Yes! 💖
           </motion.button>
 
           <motion.button
