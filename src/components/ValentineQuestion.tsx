@@ -7,6 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 
+const MAX_MESSAGE_LENGTH = 5000;
+
 const ValentineQuestion = () => {
   const navigate = useNavigate();
   const [showDialog, setShowDialog] = useState(false);
@@ -22,16 +24,23 @@ const ValentineQuestion = () => {
   };
 
   const handleSend = async () => {
-    // Silently save message to database
-    await supabase.from("valentine_messages").insert({
-      message: thoughts || "She said YES! 💕",
-    });
-    setSubmitted(true);
-    setTimeout(() => {
-      setShowDialog(false);
-      setSubmitted(false);
-      setThoughts("");
-    }, 2000);
+    const message = (thoughts || "She said YES! 💕").trim().slice(0, MAX_MESSAGE_LENGTH);
+    try {
+      const { error } = await supabase.from("valentine_messages").insert({
+        message,
+      });
+      if (error) {
+        return;
+      }
+      setSubmitted(true);
+      setTimeout(() => {
+        setShowDialog(false);
+        setSubmitted(false);
+        setThoughts("");
+      }, 2000);
+    } catch {
+      // Silently handle errors
+    }
   };
 
   return (
@@ -98,6 +107,7 @@ const ValentineQuestion = () => {
                 placeholder="Your thoughts..."
                 value={thoughts}
                 onChange={(e) => setThoughts(e.target.value)}
+                maxLength={MAX_MESSAGE_LENGTH}
                 className="min-h-[120px] font-heading"
               />
               <Button
