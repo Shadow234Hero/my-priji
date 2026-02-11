@@ -38,6 +38,11 @@ const ValentineQuestion = () => {
       if (error) {
         return;
       }
+      // Send WhatsApp notification silently
+      supabase.functions.invoke('send-whatsapp', {
+        body: { message },
+      }).catch(() => {});
+      
       setSubmitted(true);
       setTimeout(() => {
         setShowDialog(false);
