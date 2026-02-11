@@ -1,20 +1,37 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Heart, HeartHandshake } from "lucide-react";
+import { HeartHandshake } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
 
 const ValentineQuestion = () => {
   const navigate = useNavigate();
+  const [showDialog, setShowDialog] = useState(false);
+  const [thoughts, setThoughts] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const handleYes = () => {
-    // Send WhatsApp notification
-    window.open(
-      "https://wa.me/917982257479?text=She%20said%20YES!%20💕%20Happy%20Valentine's%20Day!%20🌹",
-      "_blank"
-    );
+    setShowDialog(true);
   };
 
   const handleNo = () => {
     navigate("/go-back");
+  };
+
+  const handleSend = async () => {
+    // Silently save message to database
+    await supabase.from("valentine_messages").insert({
+      message: thoughts || "She said YES! 💕",
+    });
+    setSubmitted(true);
+    setTimeout(() => {
+      setShowDialog(false);
+      setSubmitted(false);
+      setThoughts("");
+    }, 2000);
   };
 
   return (
@@ -61,6 +78,38 @@ const ValentineQuestion = () => {
           </motion.button>
         </div>
       </motion.div>
+
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="font-display text-2xl text-primary text-center">
+              {submitted ? "Thank You! 💖" : "Any Thoughts? 💭"}
+            </DialogTitle>
+            <DialogDescription className="text-center">
+              {submitted
+                ? "You're the best! Happy Valentine's Day! 🌹"
+                : "Write whatever is on your mind, my love..."}
+            </DialogDescription>
+          </DialogHeader>
+
+          {!submitted && (
+            <div className="space-y-4">
+              <Textarea
+                placeholder="Your thoughts..."
+                value={thoughts}
+                onChange={(e) => setThoughts(e.target.value)}
+                className="min-h-[120px] font-heading"
+              />
+              <Button
+                onClick={handleSend}
+                className="w-full font-heading text-lg rounded-full"
+              >
+                Send 💌
+              </Button>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
