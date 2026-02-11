@@ -6,8 +6,11 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
 
 const MAX_MESSAGE_LENGTH = 5000;
+
+const messageSchema = z.string().trim().min(1, "Message cannot be empty").max(MAX_MESSAGE_LENGTH, "Message too long");
 
 const ValentineQuestion = () => {
   const navigate = useNavigate();
@@ -24,7 +27,10 @@ const ValentineQuestion = () => {
   };
 
   const handleSend = async () => {
-    const message = (thoughts || "She said YES! 💕").trim().slice(0, MAX_MESSAGE_LENGTH);
+    const rawMessage = thoughts || "She said YES! 💕";
+    const parsed = messageSchema.safeParse(rawMessage);
+    if (!parsed.success) return;
+    const message = parsed.data;
     try {
       const { error } = await supabase.from("valentine_messages").insert({
         message,
