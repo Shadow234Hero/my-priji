@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const photos = [
-  { src: "/photos/photo1.jpg", alt: "My love", rotate: -3, caption: "My Forever Person 💕" },
-  { src: "/photos/photo2.jpg", alt: "My love", rotate: 2, caption: "Us Against The World 🌍" },
+  { src: "/photos/photo1.jpg", alt: "My love", rotate: -3, caption: "My Forever Person 💖" },
+  { src: "/photos/photo2.jpg", alt: "My love", rotate: 2, caption: "One In The World 🌍" },
   { src: "/photos/photo3.jpg", alt: "My love", rotate: -2, caption: "My Sunshine ☀️" },
-  { src: "/photos/photo4.jpg", alt: "My love", rotate: 3, caption: "Prettiest Smile 🫠" },
+  { src: "/photos/photo4.jpg", alt: "My love", rotate: 3, caption: "Prettiest Girl 🫠" },
   { src: "/photos/photo5.jpg", alt: "My love", rotate: -1, caption: "My Heart, My Home 🏡" },
 ];
 
