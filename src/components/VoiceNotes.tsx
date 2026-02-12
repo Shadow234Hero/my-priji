@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Heart, Mic, Headphones } from "lucide-react";
 
 const voiceNotes = [
-  { src: "/audio/why_me.ogg", title: "Why Me? 💭", label: "What makes me special to her", icon: "heart" },
-  { src: "/audio/what_she_is_to_me.ogg", title: "What She Is To Me 🌹", label: "She's my everything", icon: "headphones" },
-  { src: "/audio/3_qs.ogg", title: "3 Questions ❓", label: "Three things I need to know", icon: "mic" },
+  { src: "/audio/why_me.ogg", title: "LOVE? 💖", label: "What Love Meansn For Me??", icon: "heart" },
+  { src: "/audio/what_she_is_to_me.ogg", title: "How You?🤭", label: "She's my everything", icon: "headphones" },
+  { src: "/audio/3_qs.ogg", title: "3 Questions❓", label: "Three qs I need to know", icon: "mic" },
 ];
 
 const icons = {
@@ -55,10 +55,10 @@ const VoiceNotes = () => {
           <Headphones className="w-12 h-12 text-primary mx-auto" />
         </motion.div>
         <h2 className="font-display text-5xl sm:text-7xl text-primary mb-3">
-          Listen to My Heart
+          Some Words From My Heart
         </h2>
         <p className="font-heading italic text-muted-foreground text-lg">
-          Press play and hear what words alone can't say
+          Hope You Understand The Emotion of these...
         </p>
       </motion.div>
 
