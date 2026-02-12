@@ -2,13 +2,13 @@ import { useEffect, useMemo } from "react";
 
 const FloatingHearts = () => {
   const hearts = useMemo(() => 
-    Array.from({ length: 20 }, (_, i) => ({
+    Array.from({ length: 35 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
-      delay: Math.random() * 10,
-      duration: 8 + Math.random() * 8,
-      size: 12 + Math.random() * 20,
-      opacity: 0.15 + Math.random() * 0.3,
+      delay: Math.random() * 15,
+      duration: 6 + Math.random() * 10,
+      size: 8 + Math.random() * 16,
+      opacity: 0.1 + Math.random() * 0.25,
     })), []
   );
 
