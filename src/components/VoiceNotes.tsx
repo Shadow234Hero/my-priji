@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Heart, Mic, Headphones } from "lucide-react";
 
 const voiceNotes = [
-  { src: "/audio/why_me.ogg", title: "LOVE? 💖", label: "What Love Meansn For Me??", icon: "heart" },
+  { src: "/audio/why_me.ogg", title: "LOVE? 💖", label: "What Love Means For Me??", icon: "heart" },
   { src: "/audio/what_she_is_to_me.ogg", title: "How You?🤭", label: "She's my everything", icon: "headphones" },
   { src: "/audio/3_qs.ogg", title: "3 Questions❓", label: "Three qs I need to know", icon: "mic" },
 ];
