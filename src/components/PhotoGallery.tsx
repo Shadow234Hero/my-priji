@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
 const photos = [
-  { src: "/photos/photo1.jpg", alt: "My love", rotate: -3 },
-  { src: "/photos/photo2.jpg", alt: "My love", rotate: 2 },
-  { src: "/photos/photo3.jpg", alt: "My love", rotate: -2 },
-  { src: "/photos/photo4.jpg", alt: "My love", rotate: 3 },
-  { src: "/photos/photo5.jpg", alt: "My love", rotate: -1 },
+  { src: "/photos/photo1.jpg", alt: "My love", rotate: -3, caption: "My Forever Person 💕" },
+  { src: "/photos/photo2.jpg", alt: "My love", rotate: 2, caption: "Us Against The World 🌍" },
+  { src: "/photos/photo3.jpg", alt: "My love", rotate: -2, caption: "My Sunshine ☀️" },
+  { src: "/photos/photo4.jpg", alt: "My love", rotate: 3, caption: "Prettiest Smile 🫠" },
+  { src: "/photos/photo5.jpg", alt: "My love", rotate: -1, caption: "My Heart, My Home 🏡" },
 ];
 
 const PhotoGallery = () => {
@@ -44,7 +44,8 @@ const PhotoGallery = () => {
                 className="w-full h-64 sm:h-80 object-cover rounded-lg"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 rounded-xl" />
+              <p className="font-display text-primary text-center text-lg sm:text-xl mt-2 pb-1">{photo.caption}</p>
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 rounded-xl pointer-events-none" />
             </div>
           </motion.div>
         ))}
