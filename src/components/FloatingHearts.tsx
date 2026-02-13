@@ -1,19 +1,19 @@
 import { useEffect, useMemo } from "react";
 
 const FloatingHearts = () => {
-const hearts = useMemo(() => 
-    Array.from({ length: 12 }, (_, i) => ({
+  const hearts = useMemo(() => 
+    Array.from({ length: 10 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
-      delay: Math.random() * 20,
-      duration: 10 + Math.random() * 15,
-      size: 14 + Math.random() * 20,
-      opacity: 0.15 + Math.random() * 0.2,
+      delay: Math.random() * 25,
+      duration: 12 + Math.random() * 18,
+      size: 16 + Math.random() * 22,
+      opacity: 0.35 + Math.random() * 0.3,
     })), []
   );
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 50 }}>
       {hearts.map((heart) => (
         <div
           key={heart.id}
