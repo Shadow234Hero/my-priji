@@ -1,32 +1,34 @@
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 
 const FloatingHearts = () => {
   const hearts = useMemo(() => 
-    Array.from({ length: 10 }, (_, i) => ({
+    Array.from({ length: 8 }, (_, i) => ({
       id: i,
-      left: Math.random() * 100,
-      delay: Math.random() * 25,
-      duration: 12 + Math.random() * 18,
-      size: 16 + Math.random() * 22,
-      opacity: 0.35 + Math.random() * 0.3,
+      left: 5 + (i * 12.5),
+      top: 10 + (i % 3) * 35,
+      size: 20 + (i % 3) * 10,
+      delay: i * 0.4,
     })), []
   );
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 50 }}>
+    <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
       {hearts.map((heart) => (
         <div
           key={heart.id}
-          className="absolute animate-float-heart"
+          className="absolute animate-pulse-glow"
           style={{
             left: `${heart.left}%`,
-            animationDelay: `${heart.delay}s`,
-            animationDuration: `${heart.duration}s`,
+            top: `${heart.top}%`,
             fontSize: `${heart.size}px`,
-            opacity: heart.opacity,
+            animationDelay: `${heart.delay}s`,
+            filter: "drop-shadow(0 0 6px hsl(340 82% 65% / 0.6))",
+            opacity: 0.3,
+            WebkitTextStroke: "1.5px hsl(340, 82%, 65%)",
+            color: "transparent",
           }}
         >
-          💕
+          💖
         </div>
       ))}
     </div>
